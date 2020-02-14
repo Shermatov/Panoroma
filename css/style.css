@@ -1,0 +1,681 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/******HEADER******/
+.header {
+    position: absolute;
+    width: 100%;
+    padding-top: 130px;
+
+
+}
+
+.logo {
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 40px;
+    transition: 0.4s;
+    margin-top: -125px;
+
+}
+
+.nav {
+    margin-top: -200px;
+}
+
+.list-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #191919;
+    border: none;
+    margin-right: 40px;
+}
+
+.btn-secondary:hover {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #062c33;
+}
+
+.dropdown-item {
+    background: transparent;
+}
+
+.dropdown-item:hover {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #062c33;
+}
+
+.list-item {
+    color: #191919;
+    margin-right: 27px;
+
+}
+
+.ad {
+    color: #191919;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: none;
+    text-align: left;
+}
+
+.socials .fab {
+    border: 1px solid #4f59a1;
+    border-radius: 50%;
+    padding: 8px 9px;
+    margin: 5px;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+}
+
+.socials .fab:hover {
+    background: #4f59a1;
+    transition: 0.4s;
+    box-shadow: 0 0 5px 3px #777777;
+    color: #FFFFFF;
+}
+
+.list-item i .fa {
+    background: #4f59a1;
+}
+
+.call2 {
+    width: 131px;
+    height: 31px;
+    background: #4f59a1;
+    color: #fff3cd;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.call2:hover {
+    background: #201f27;
+    transition: 0.4s;
+    box-shadow: 0 0 5px 3px #777777;
+
+}
+
+.loc {
+    margin-top: -23px;
+    margin-left: 47px;
+}
+
+.call3 {
+    margin-top: -64px;
+    margin-right: 15px;
+}
+
+/***********Burger******/
+
+
+.burger-menu {
+    display: block;
+}
+
+.burger-menu_button {
+    position: fixed;
+    top: 40px;
+    right: 280px;
+    z-index: 30;
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+
+.burger-menu_lines::before,
+.burger-menu_lines::after,
+.burger-menu_lines {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: #4f59a1;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu_lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.burger-menu_lines::before {
+    content: '';
+    top: -12px;
+}
+
+.burger-menu_lines::after {
+    content: '';
+    top: 12px;
+}
+
+
+.burger-menu_active .burger-menu_lines {
+    background-color: transparent;
+}
+
+.burger-menu_active .burger-menu_lines::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu_lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #24414a;
+    overflow-y: auto;
+    right: -100%;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.burger-menu_active .burger-menu_nav {
+    right: 0;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu_link {
+    padding: 18px 35px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #4f59a1;
+    border-bottom: 1px solid #000;
+}
+
+.burger-menu_link:first-child {
+    border-top: 1px solid #000;
+}
+
+.burger-menu_link:hover {
+    filter: brightness(0.9);
+}
+
+.burger-menu_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.burger-menu_active .burger-menu_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/***********Burger******/
+
+
+/******HEADER******/
+
+/******HERO******/
+#hero {
+    height: 1067px;
+    display: flex;
+    background: url("../img/CITY.png"), no-repeat center/cover;
+    background-attachment: fixed;
+    margin-bottom: 80px;
+}
+
+.hero__content {
+    padding-top: 200px;
+    margin-bottom: 240px;
+}
+
+
+.hero__content-title {
+    font-weight: 600;
+    font-size: 70px;
+}
+
+.hero__content-description {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.hero_form {
+    width: 1200px;
+    height: 252px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 45px;
+}
+
+.hero_title {
+    font-weight: 400;
+
+
+}
+
+.hero__link {
+    margin-left: 1000px;
+    margin-top: -180px;
+}
+
+.hero_btn {
+    height: 50px;
+    width: 192px;
+    background: #4f59a1;
+    text-align: center;
+    margin-right: 915px;
+    border-radius: 3px;
+
+
+}
+
+.hero_btn p {
+    padding-top: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.hero_input {
+    border: 1px solid #dddddd;
+    height: 64px;
+    width: 357px;
+    padding-top: 18px;
+    padding-left: 30px;
+
+}
+
+
+.hero_btn:hover {
+    background: #201f27;
+    transition: 0.4s;
+    box-shadow: 0 0 5px 3px #777777;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/******HERO******/
+
+
+/******ROOMS********/
+#rooms {
+    margin-bottom: 95px;
+
+}
+
+.room_title {
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 50px;
+}
+
+.home {
+    margin-right: -46px;
+    margin-left: -47px;
+
+}
+
+.room_home {
+    margin-bottom: 100px;
+}
+
+.room_home:before {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #4f59a1;
+    position: absolute;
+    margin-top: 436px;
+    width: 396px;
+    background: #4f59a1;
+
+}
+
+.room_btn p {
+    width: 195px;
+    height: 45px;
+    background: #4f59a1;
+    color: #fff3cd;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 10px;
+    float: right;
+    margin-top: -50px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+
+.zab:hover {
+    background: #201f27;
+    transition: 0.4s;
+    box-shadow: 0 0 5px 3px #777777;
+}
+
+.svg_arrow {
+    margin-top: -50px;
+    margin-left: 170px;
+}
+
+.room_home span {
+    font-weight: 700;
+    margin-top: 30px;
+
+}
+
+.room_home p {
+    font-weight: 500;
+
+}
+
+.work__description {
+    background: #f9f9f9;
+    margin-top: 20px;
+    height: 480px;
+}
+
+.title__room {
+    margin-top: 70px;
+    margin-bottom: 53px;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.des__room {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 55px;
+}
+
+.p__btn {
+    height: 41px;
+    width: 207px;
+    background: #4f59a1;
+    color: #fff3cd;
+    text-align: center;
+    padding: 10px;
+    margin-top: -60px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+.p__btn:hover {
+    background: #201f27;;
+    transition: 0.6s;
+    box-shadow: 0 0 5px 3px #777777;
+}
+
+/******ROOMS********/
+
+/****TESTIMONIALS****/
+#testimonials {
+    background: url("../img/bg2.png") no-repeat center/cover;
+    background-attachment: fixed;
+
+
+}
+
+.dark_title {
+    font-size: 55px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 58px;
+    padding-top: 88px;
+
+
+}
+
+.svg {
+    font-size: 20px;
+    font-weight: 700;
+
+
+}
+
+.svg span {
+    font-weight: 300;
+}
+
+.box1 {
+    margin-bottom: 104px;
+
+
+}
+
+.box2 {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 25px;
+    background: #ffffff;
+    width: 295px;
+    height: 340px;
+    text-align: center;
+
+}
+
+.price {
+    margin-top: 30px;
+}
+
+.box_title {
+    text-align: center;
+
+    font-weight: 500;
+
+
+}
+
+.price h5 {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.price_time {
+    list-style: none;
+}
+
+.price_time span {
+    margin-right: 7px;
+}
+
+svg {
+    margin-top: 13px;
+}
+
+.price_btn {
+    background: #201f27;
+    color: #ffffff;
+    border-radius: 30px;
+    width: 212px;
+    height: 56px;
+    text-align: center;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.price_btn:hover {
+    background: #4f59a1;
+    color: #fff3cd;
+    transition: 0.5s;
+    box-shadow: 0 0 5px 3px #777777;
+}
+
+.time {
+    list-style: none;
+    font-size: 12px;
+
+}
+
+.time li {
+    margin-right: 18px;
+    margin-top: -25px;
+    font-weight: 300;
+    font-size: 14px;
+
+}
+
+.owl-carousel .owl-dots {
+    display: flex;
+    justify-content: center;
+
+}
+
+.owl-dot-active {
+    display: flex;
+    justify-content: center;
+}
+
+.owl-carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.owl-carousel .owl-dots.disabled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-carousel button.owl-dot {
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+}
+
+/****TESTIMONIALS****/
+
+
+/*****DESCRIPTION********/
+#description {
+    background: #f8f8f8;
+    padding-top: 78px;
+
+
+}
+
+.des__title {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 75px;
+    color: #212121;
+}
+
+.des__des {
+
+    font-weight: 400;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-top: -220px;
+}
+
+.women {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 74px;
+    margin-left: 50px;
+
+}
+
+.border_des {
+
+
+}
+
+
+/*****DESCRIPTION********/
+
+
+/****Footer****/
+footer {
+    margin-top: 150px;
+    background: #ffffff;
+
+
+}
+
+.footer-title {
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+/****Footer****/
+
+
+
+

@@ -1,0 +1,334 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 113px;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+select {
+    border: none;
+}
+
+.fa {
+    color: #626bab;
+    transition: .4s;
+}
+
+.fa:hover {
+    background: #fff;
+}
+
+.nav-item {
+    margin-left: 82px;
+    margin-right: 80px;
+    text-align: left;
+}
+
+.nav-ul {
+    display: flex;
+    margin-right: 40px;
+}
+
+.nav-ul li {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #626bab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px;
+    transition: .4s;
+}
+
+.nav-ul li:hover {
+    background: #626bab;
+}
+
+.nav-btn {
+    width: 130px;
+    height: 30px;
+    background: #4f59a1;
+    font-size: 13px;
+    border-radius: 3px;
+    transition: .4s;
+    color: #fff;
+}
+
+.nav-btn:hover {
+    background: blue;
+}
+
+.nav-call {
+    margin-right: -23px;
+}
+
+/*#########################burger###############################*/
+/*#########################burger###############################*/
+.burger-menu {
+    display: block;
+}
+
+.burger-menu_button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 30;
+    width: 60px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+
+.burger-menu_lines::before,
+.burger-menu_lines::after,
+.burger-menu_lines {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: #4f59a1;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu_lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.burger-menu_lines::before {
+    content: '';
+    top: -12px;
+}
+
+.burger-menu_lines::after {
+    content: '';
+    top: 12px;
+}
+
+
+.burger-menu_active .burger-menu_lines {
+    background-color: transparent;
+}
+
+.burger-menu_active .burger-menu_lines::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu_lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.burger-menu_nav {
+    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: #24414a;
+    overflow-y: auto;
+    right: -100%;
+    padding-right: 100px;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.burger-menu_active .burger-menu_nav {
+    right: 0;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.burger-menu_link {
+    padding: 18px 35px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #626bab;
+    border-bottom: 1px solid #000;
+}
+
+.burger-menu_link:first-child {
+    border-top: 1px solid #000;
+}
+
+.burger-menu_link:hover {
+    filter: brightness(0.9);
+}
+
+.burger-menu_overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100vh;
+    z-index: 10;
+}
+
+.burger-menu_active .burger-menu_overlay {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/*#########################burger###############################*/
+/*#########################burger###############################*/
+/*################header#####################*/
+/*################header#####################*/
+/*################hero#####################*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero_title {
+    font-size: 70px;
+    margin-top: 206px;
+}
+
+
+/*################hero#####################*/
+/*################hponarama#####################*/
+.ponarama_title {
+    font-size: 33px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.ponarama_description {
+    line-height: 20px;
+    font-size: 15px;
+}
+
+/*################hponarama#####################*/
+/*################near#####################*/
+.near_title {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 80px 0;
+}
+
+.img_description {
+    position: relative;
+    margin-top: 50px;
+}
+
+.img_description:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 20px;
+    background: #282828;
+    left: 0;
+    top: -23px;
+}
+
+.footer {
+    color: #aaaaaa;
+    text-align: center;
+
+}
+
+/*################near#####################*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    margin-top: 50px;
+    border-top: 1px solid #aaaaaa;
+}
+
+/*################priceeee###################*/
+/*################priceeee###################*/
+.price_number {
+    margin-top: 120px;
+}
+
+.price_title {
+    color: #343434;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.price_btn {
+    width: 200px;
+    height: 45px;
+    background: #4f59a1;
+    transition: .4s;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+.price_btn:hover {
+    background: #201f27;
+}
+
+.price_header {
+    border-bottom: 1px solid #aaaaaa;
+}
+
+.rooms {
+    margin-left: -50px;
+    margin-right: -50px;
+
+}
+
+/*.rooms3 :before {*/
+/*    content: '';*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    border: 4px solid #4f59a1;*/
+/*    position: absolute;*/
+/*    margin-top: 456px;*/
+/*    width:406px;*/
+
+/*}*/
+
+/*################priceeee###################*/
